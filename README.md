@@ -2,13 +2,15 @@ Installation
 - Clone repo
 - Buat DB
 - create table users  :
-  CREATE TABLE USERS (
-    id int(100),
-    nama varchar(100),
-    email varchar(100),
-    umur varchar(100),
-    primary_key(id)
-  )
+  create table users(
+    -> id int not null auto_increment primary key
+    -> , nama varchar(100),
+    -> email varchar(100),
+    -> umur int(100),
+    -> created_at timestamp default current_timestamp,
+    -> updated_at timestamp,
+    -> deleted_at timestamp
+    -> );
 - set db .env
 - go run main.go
 
